@@ -1,1 +1,3 @@
 # Batch-merge-sort-cuda-cpp
+
+Implementation of batch merge sort algorithm, based on the article of [O. Green et al., 2013](https://web.cs.ucdavis.edu/~amenta/f15/GPUmp.pdf). For simplification, we only consider the case of power of 2 arrays. We test different algorithms for comparaison : one version on CPU and two version on GPU (with and without shared memory). For the last one, we use all the memory capacity for each block so for this one, we need to only consider arrays of size $n \leq 2^{12}$. In the file **`Batch-merge-sort.cu`**, we take a batch of vector and sort them on GPU ; in **`Batch-cpu-gpu.cu`**, we compare speed of CPU and GPU versions and finally in **`Comparaison-shared.cu`**, we compare speed of version with/without shared memory.
